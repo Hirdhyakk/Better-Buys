@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lenovo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </head>
+    <body>
+        <div class="child-1">
+            <img id="productImage1" name="productImage" src="Images/Lenovo-1.jpg" width="40%"><br>
+            <p align="justify" class="description">Lenovo IdeaPad Slim 3 Intel Core i5 11th Gen 1135G7 - (16 GB/512 GB SSD/Windows 11 Home) 15ITL6 Thin and Light Laptop</p></a>
+            <h3>Price 42990 INR</h3>
+            <button id="buyNowButton" type="submit">Buy Now</button>
+        </div>
+    </body>
+</html>
+<script>
+var options = {
+    "key": "rzp_test_PpkeCXpchzaCf6", // Enter the Key ID generated from the Dashboard
+    "amount": "4299000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Payment Gateway by Razorpay",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "razorpay_payment_id": "pay_29QQoUBi66xm2f",
+    "razorpay_order_id": "order_9A33XWu170gUtm",
+    "razorpay_signature": "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d",
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature);
+    },
+    "prefill": {
+        "name": "Test Name",
+        "email": "test@gmail.com",
+        "contact": "+919000090000"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('buyNowButton').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+};
+</script>

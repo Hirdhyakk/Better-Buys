@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Contact Us Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+
+        <style>
+            body {
+                margin-top: 5rem;
+            }
+
+            /* Style inputs with type="text", select elements and textareas */
+            input[type=text], input[type=tel], select, textarea {
+                width: 100%; /* Full width */
+                padding: 12px; /* Some padding */
+                border: 1px solid #ccc; /* Gray border */
+                border-radius: 4px; /* Rounded borders */
+                box-sizing: border-box; /* Make sure that padding and width stays in place */
+                margin-top: 6px; /* Add a top margin */
+                margin-bottom: 16px; /* Bottom margin */
+                resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+            }
+
+            /* Style the submit button with a specific background color etc */
+            input[type=submit] {
+                background-color: #04AA6D;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            /* Add a background color and some padding around the form */
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!--<form method="post" action="ContactUsServlet">-->
+        <!--            <table>
+                        <tr>
+                            <td><label>Name </label></td>
+                            <td><input type="text" name="name" placeholder="" onkeypress="return onlyAlphaKey(event)" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email address</label></td>
+                            <td><input type="email" name="email" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Phone No.</label></td>
+                            <td><input type="tel" name="phone" placeholder="" pattern="[0-9]{10}" onkeypress="return onlyNumberKey(event)" required></td>
+                        </tr>  
+                        <tr>
+                            <td><label>Comments</label></td>
+                            <td><textarea name="comments" rows="5" cols="22" required></textarea></td>
+                        </tr> 
+                        <tr>
+                            <td><input type="submit" name="submit" value="Submit Feedback"></td>
+                        </tr> 
+                    </table>-->
+        <div class="container">
+            <form method="post" action="ContactUsServlet">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="First Name">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Second Name">
+
+                <label for="emailId">Email Id</label>
+                <input type="text" id="emailId" name="emailId" placeholder="test@gmail.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="0000000000">
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+    </body>
+</html>

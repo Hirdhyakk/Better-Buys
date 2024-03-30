@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"><!-- Linking CSS file -->
+        <script src="MyJS.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    </head>
+    <body>
+        <div id="loginBannerContent">
+            <form name="MyForm" id="form_login_register" method="get" action="MyServlet" target="_blank">
+                <table>
+                    <caption><h1>Better Buys Laptop Store</h1></caption>
+                    <tr>
+                        <!--<td><label for="name">Enter username</label></td>-->
+                        <td><input type="text" style="height: 30px; width:250px;" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="name" name="uname"></td>
+                    </tr>
+                    <tr>
+                        <!--<td><label for="password">Enter password</label></td>-->
+                        <td><input type="password" id="new-password-field" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]){6,}$/" style="height: 30px; width:250px;" placeholder="Password" id="password" name="pass">
+                        <span onclick="turnONPass()"  class="fa fa-eye-slash" id="toggle-new-password"></span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" style="margin-left: 50px;height: 30px; width:150px;" name="login" value="LOG IN"></td>
+                    </tr>
+                    <tr>
+                        <td><a  href="registration.html" style="margin-left: 50px; text-decoration:none; color: white">Not a member? Register</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
