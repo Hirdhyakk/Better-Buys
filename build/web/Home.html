@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style_1.css"/>
+    </head>
+    <body>
+    <center>
+<!--        <%--Welcome <%=session.getAttribute("username")%>--%>
+        Yours welcome <%=session.getAttribute("username")%>-->
+        <header class="header">
+            <a href="#" class="logo">Better Buys</a>
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="Home.html" class="active">Home</a>
+                <a href="category.html">Categories</a>
+                <a href="contactUs.html">Contact Us</a>
+                <a href="LogoutServlet">Log Out</a>
+            </nav>
+        </header>
+        <div id="bannerImage">
+            <!--<a style="float:right;margin-right: 20px;" href="contactUs.html" class="btn btn-info">Contact Us</a>-->
+            <center>
+                <div id="bannerContent">
+                    <h1 style="font-size: 50px; margin: 20px;">BETTER BUYS LAPTOP STORE</h1>
+                    <h2>We sell branded Laptops.</h2>
+                    <!--<a href="login.html" class="btn btn-danger">Shop Now</a>-->
+                </div>
+            </center>
+        </div>
+    </center>
+</body>
+</html>

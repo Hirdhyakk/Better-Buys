@@ -1,0 +1,64 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 06-Oct-2023, 9:42:06 am
+    Author     : akbri
+*/
+*
+{
+    margin: 0;
+    padding:0;
+}
+#bannerImage{
+    padding-top:75px;
+    padding-bottom:50px;
+    margin-bottom: 20px;
+    text-align:center;
+    color:#f8f8f8;
+    /*    background-image:url(Images/background.jpg);
+        background-size:cover;*/
+}
+body
+{
+    background-image:url(Images/background.jpg);
+    background-size:cover;
+    /*background-repeat: no-repeat;*/
+}
+#bannerContent{
+    position:relative;
+    padding-top:6%;
+    padding-bottom:6%;
+    margin-top:12%;
+    margin-bottom:12%;
+    background-color:rgba(0,0,0,0.7);
+    max-width:660px;
+}
+#form_login_register {
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    color: white;
+}
+table {
+    border-collapse: separate;
+    /*border-spacing: 0 15px;*/
+}
+td{
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+}
+.product
+{
+    display: flex;
+}
+.child-1, .child-2, .child-3, .child-4
+{
+    flex:25%;
+}
+.categories {
+    margin-top: 200px;
+    display: flex;
+}

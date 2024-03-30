@@ -1,0 +1,111 @@
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="MyJS.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <link rel="stylesheet" href="style.css"><!-- Linking CSS file -->
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1 style="color: white; text-align: center; margin-top: 10rem;">Better Buys Laptop Store</h1>
+        <div class="information" id="info">
+            <form method="post" action="RegistrationServlet" id="form_login_register">
+                <table>
+                    <!--<caption><h1>Kapoor Lappi Store</h1></caption>-->
+                    <tr>
+                        <td><label>Name </label></td>
+                        <td><input type="text" style="width:160px;" name="name" placeholder="" onkeypress="return onlyAlphaKey(event)" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email address</label></td>
+                        <td><input type="email" style="width:160px;" name="email" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Phone No.</label></td>
+                        <td><input type="tel" style="width:160px;" name="phone" placeholder="" pattern="[0-9]{10}" onkeypress="return onlyNumberKey(event)" required></td>
+                    </tr>            
+                    <tr>
+                        <td><label>Create new password</label></td>
+                        <td><input style="width:160px;" id="new-password-field" type="password" name="password" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]){6,}$/"  required>
+                            <span onclick="turnONPass()"  class="fa fa-eye-slash" id="toggle-new-password"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Confirm password</label></td>
+                        <td><input style="width:160px;" type="password" id="confirm-password-field" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]){6,}$/" required>
+                            <span onclick="turnONConfirmPass()"  class="fa fa-eye-slash" id="toggle-confirm-password"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="gotoauthenticate" style="text-align: center; margin-left: 20%;width:160px;height: 30px;" type="submit" name="submit" class="btn btn-primary btn-block">Get OTP</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!--        <div class="authenticate" id="authen">
+                    <form method="post" action="OTPServlet" id="form_login_register">
+                        <table>
+                            <tr>
+                                <td><label>Email address</label></td>
+                                <td><input type="email" style="width:160px;" name="sendEmail" placeholder="" readonly></td>
+                            </tr>
+                            <tr>
+                                <td><label>Phone No.</label></td>
+                                <td><input type="tel" style="width:160px;" name="sendPhone" placeholder="" readonly></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input class="form-check-input" type="radio" name="OTPchoice" id="flexRadioDefault1" value="Email" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Email
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="radio" name="OTPchoice" id="flexRadioDefault2" value="Phone Number">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Phone Number
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button id="gotoregister" style="text-align: center; margin-left: 35%;width:80px;height: 30px;" type="submit" name="submit" class="btn btn-primary btn-block">Get OTP</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        
+                <div class="register" id="last">
+                    <form method="post" action="RegistrationServlet" id="form_login_register">
+                        <table>
+                            <tr>
+                                <td><label>Enter OTP</label></td>
+                                <td><input type="text" style="width:160px;" name="getOTP" placeholder="XXXXXX"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button id="register" style="text-align: center; margin-left: 20%;width:160px;height: 30px;" type="submit" name="submit" class="btn btn-primary btn-block">Register</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        
+                <script>
+                    const info = document.getElementById("info");
+                    const authen = document.getElementById("authen");
+                    const last = document.getElementById("last");
+                    gotoauthenticate.addEventListener("click", () => {
+                        info.classList.remove("active");
+                        authen.classList.add("active");
+                    });
+                    gotoregister.addEventListener("click", () => {
+                        authen.classList.remove("active");
+                        last.classList.add("active");
+                    });
+                </script>-->
+
+    </body>
+</html>     
